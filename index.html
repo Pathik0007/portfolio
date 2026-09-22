@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pathik Ahmed | Machine Learning, Graph Analytics &amp; Reliable AI</title>
+<meta name="description" content="Pathik Ahmed — Master of Data Science student at Macquarie University working on graph neural networks for fraud detection, time series forecasting, and weakly-supervised computer vision. Two IEEE publications, ongoing research, and applied projects.">
+<meta property="og:title" content="Pathik Ahmed | Machine Learning, Graph Analytics &amp; Reliable AI">
+<meta property="og:description" content="Master of Data Science student at Macquarie University working on graph neural networks for fraud detection, time series forecasting, and weakly-supervised computer vision.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Pathik Ahmed | Machine Learning, Graph Analytics &amp; Reliable AI">
+<meta name="twitter:description" content="Master of Data Science student at Macquarie University working on graph neural networks for fraud detection, time series forecasting, and weakly-supervised computer vision.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;450;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FFFFFF;
+    --ink:#15202B;
+    --muted:#586572;
+    --faint:#97A1AC;
+    --line:#E9EBEE;
+    --line2:#F2F4F6;
+    --accent:#0F6E63;
+    --accent-deep:#0B524A;
+    --accent-soft:#E8F3F1;
+    --sidebar:300px;
+    --maxw:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);color:var(--ink);
+    font-family:"Inter",system-ui,sans-serif;
+    font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;font-weight:400;
+  }
+  body::before{content:"";position:fixed;top:0;left:0;right:0;height:4px;background:var(--accent);z-index:100}
+  a{color:var(--accent);text-decoration:none;transition:color .15s}
+  a:hover{color:var(--accent-deep)}
+  a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+  .shell{max-width:var(--maxw);margin:0 auto;padding:0 40px;display:grid;grid-template-columns:var(--sidebar) 1fr;gap:80px;align-items:start}
+
+  .side{position:sticky;top:0;height:100vh;padding:64px 0 40px;display:flex;flex-direction:column}
+  .monogram{width:64px;height:64px;border-radius:50%;background:var(--accent-soft);color:var(--accent-deep);
+    display:flex;align-items:center;justify-content:center;font-family:"Fraunces",serif;font-weight:600;font-size:24px;
+    letter-spacing:.02em;border:1px solid #D6E7E3;margin-bottom:26px}
+  .side h1{font-family:"Fraunces",serif;font-weight:500;font-size:30px;line-height:1.08;letter-spacing:-.01em;margin-bottom:8px}
+  .side .role{font-size:14px;color:var(--muted);letter-spacing:.01em}
+  .side .tag{font-size:13.5px;color:var(--faint);margin-top:14px;line-height:1.5;max-width:24ch}
+  .side nav{margin-top:34px;display:flex;flex-direction:column;gap:2px}
+  .side nav a{font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.04em;color:var(--muted);
+    text-transform:uppercase;padding:6px 0;display:flex;align-items:center;gap:12px;transition:color .15s}
+  .side nav a::before{content:"";width:16px;height:1px;background:var(--faint);transition:width .2s,background .2s}
+  .side nav a:hover,.side nav a.active{color:var(--ink)}
+  .side nav a.active::before{width:30px;background:var(--accent)}
+  .side nav a:hover::before{background:var(--accent)}
+  .side .social{margin-top:auto;padding-top:28px;display:flex;flex-wrap:wrap;gap:6px 16px}
+  .side .social a{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);border-bottom:1px solid var(--line)}
+  .side .social a:hover{color:var(--accent);border-color:var(--accent)}
+  .side .loc{font-size:12px;color:var(--faint);margin-top:18px;font-family:"IBM Plex Mono",monospace}
+
+  main{padding:64px 0 100px;min-width:0}
+  .block{padding-bottom:64px;margin-bottom:64px;border-bottom:1px solid var(--line)}
+  .block:last-child{border-bottom:none;margin-bottom:0}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;display:flex;align-items:center;gap:10px}
+  .eyebrow .n{color:var(--faint)}
+  h2{font-family:"Fraunces",serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin-bottom:22px}
+  .intro{font-size:18.5px;line-height:1.62;color:var(--ink);max-width:60ch}
+  .intro em{font-style:normal;color:var(--accent);font-weight:500}
+  .intro + .intro{margin-top:18px;font-size:16px;color:var(--muted)}
+
+  .pub{position:relative;padding:0 0 26px 22px;margin-bottom:26px;border-bottom:1px solid var(--line2)}
+  .pub:last-of-type{border-bottom:none;margin-bottom:0;padding-bottom:0}
+  .pub::before{content:"";position:absolute;left:0;top:6px;bottom:26px;width:2px;background:var(--line);transition:background .2s}
+  .pub:hover::before{background:var(--accent)}
+  .pub:last-of-type::before{bottom:0}
+  .pub-role{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin-bottom:9px;display:inline-block}
+  .pub-role.co{color:var(--faint)}
+  .pub h3{font-family:"Fraunces",serif;font-weight:500;font-size:20px;line-height:1.32;margin-bottom:10px}
+  .pub h3 a{color:var(--ink)}
+  .pub h3 a:hover{color:var(--accent)}
+  .pub .auth{font-size:14px;color:var(--muted);line-height:1.55}
+  .pub .auth b{color:var(--ink);font-weight:600}
+  .pub .venue{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--faint);margin-top:8px;display:flex;flex-wrap:wrap;gap:6px 12px}
+  .pub .venue .cite{color:var(--accent)}
+  .metrics{display:flex;gap:40px;flex-wrap:wrap;margin-top:34px;padding-top:28px;border-top:1px solid var(--line2)}
+  .metric .n{font-family:"Fraunces",serif;font-weight:500;font-size:32px;line-height:1;color:var(--accent-deep)}
+  .metric .l{font-size:12.5px;color:var(--muted);margin-top:7px;letter-spacing:.02em}
+
+  .edu-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:8px}
+  .edu-head h3{font-family:"Fraunces",serif;font-weight:500;font-size:20px}
+  .edu-head .meta{font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--muted)}
+  .edu-line{font-size:14.5px;color:var(--muted);margin-bottom:20px}
+  .edu-line b{color:var(--ink);font-weight:600;font-family:"IBM Plex Mono",monospace;font-size:13.5px}
+  .focus-row{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:14px 0;border-top:1px solid var(--line2);font-size:14.5px}
+  .focus-row .k{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--faint)}
+  .focus-row .v{color:var(--ink)}
+
+  .proj{display:block;padding:20px 22px;border:1px solid var(--line);border-radius:10px;margin-bottom:13px;transition:border-color .18s,box-shadow .18s,transform .18s}
+  .proj:hover{border-color:#D6E7E3;box-shadow:0 6px 22px -14px rgba(15,110,99,.35);transform:translateY(-2px)}
+  .proj.featured{border:1.5px solid var(--accent);background:linear-gradient(180deg,var(--accent-soft) 0%,rgba(232,243,241,.35) 100%);box-shadow:0 8px 26px -16px rgba(15,110,99,.45);margin-bottom:22px;margin-top:4px}
+  .proj.featured:hover{border-color:var(--accent-deep);transform:translateY(-2px)}
+  .featured-label{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--accent-deep);display:inline-block;padding:3px 9px;border-radius:20px;margin-bottom:10px}
+  .proj .visit{font-family:"IBM Plex Mono",monospace;font-size:12.5px;margin-top:12px;display:inline-flex;align-items:center;gap:6px;color:var(--accent-deep);font-weight:500;background:#fff;border:1px solid var(--accent);padding:6px 12px;border-radius:7px;transition:background .15s}
+  .proj .visit:hover{background:var(--accent-soft)}
+  .proj .ph{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:7px}
+  .proj h3{font-size:16px;font-weight:600;color:var(--ink)}
+  .proj .stack{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--accent);white-space:nowrap}
+  .proj p{font-size:14px;color:var(--muted);line-height:1.62;max-width:66ch}
+  .proj .repo{font-family:"IBM Plex Mono",monospace;font-size:12px;margin-top:10px;display:inline-block}
+  .aside-note{font-size:13.5px;color:var(--muted);line-height:1.7;padding:16px 20px;background:var(--line2);border-radius:10px}
+  .aside-note b{color:var(--ink);font-weight:600}
+
+  .skill{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:18px 0;border-top:1px solid var(--line2)}
+  .skill:first-child{border-top:none;padding-top:0}
+  .skill .k{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--faint);padding-top:5px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font-size:13px;padding:5px 13px;border:1px solid var(--line);border-radius:20px;color:var(--ink);background:#fff;transition:border-color .15s,color .15s}
+  .chip:hover{border-color:var(--accent);color:var(--accent)}
+  .chip.pri{background:var(--accent-soft);border-color:#D6E7E3;color:var(--accent-deep);font-weight:500}
+
+  .role-block{padding:18px 0;border-top:1px solid var(--line2)}
+  .role-block:first-of-type{border-top:none;padding-top:0}
+  .role-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:4px}
+  .role-head .r{font-size:16px;font-weight:600;color:var(--ink)}
+  .role-head .d{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--faint)}
+  .role-block .org{font-size:14px;color:var(--accent);margin-bottom:8px}
+  .role-block p{font-size:14px;color:var(--muted);line-height:1.62;max-width:64ch}
+
+  .draft{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--faint);
+    background:var(--line2);border-radius:6px;padding:9px 13px;margin-top:12px;line-height:1.5}
+  .draft b{color:var(--accent);font-weight:500}
+
+  @media (max-width:860px){
+    .shell{grid-template-columns:1fr;gap:0;padding:0 28px}
+    .side{position:static;height:auto;padding:52px 0 8px}
+    .side nav{display:none}
+    .side .social{margin-top:22px;padding-top:22px;border-top:1px solid var(--line)}
+    .side .loc{margin-top:12px}
+    main{padding:44px 0 72px}
+    .metrics{gap:28px}
+    .skill,.focus-row{grid-template-columns:1fr;gap:8px}
+    .skill .k{padding-top:0}
+  }
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <aside class="side">
+    <div class="monogram">PA</div>
+    <h1>Pathik Ahmed</h1>
+    <div class="role">Machine Learning, Graph Analytics &amp; Reliable AI</div>
+    <p class="tag">Master of Data Science Student, Macquarie University</p>
+    <nav aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#research">Publications</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+    </nav>
+    <div class="social">
+      <a href="mailto:pathik.ahmed@students.mq.edu.au">Email</a>
+      <a href="https://scholar.google.com/citations?user=ib69qUkAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+      <a href="https://orcid.org/0009-0003-5877-0526" target="_blank" rel="noopener">ORCID</a>
+      <a href="https://www.linkedin.com/in/pathik-ahmed-418643149/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Pathik0007" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="loc">Sydney, Australia</div>
+  </aside>
+
+  <main>
+
+    <section id="about" class="block">
+      <div class="eyebrow"><span class="n">01</span> About</div>
+      <p class="intro">Master of Data Science student at Macquarie University, Sydney, working in <em>machine learning</em>, <em>deep learning</em>, and <em>statistical learning</em>.</p>
+      <p class="intro">Published research applies convolutional regression and segmentation architectures to fetal biometry from ultrasound, alongside a second paper on metaheuristic optimisation for constrained problems. Current work extends this into <b>graph neural networks for fraud detection</b> and <b>time series forecasting</b>, alongside <b>weakly-supervised and attention-based learning</b>, unstructured text and image mining, and predictive modelling on real, messy, imbalanced data. Rigour matters as much as results: honest evaluation metrics, leakage-safe design, and reproducible pipelines.</p>
+      <p class="intro" style="font-style:italic">Research interests: Graph Machine Learning · Fraud &amp; Anomaly Detection · Robust &amp; Trustworthy AI · Time-Series &amp; Continual Learning · Data-Centric &amp; Generative AI · Explainable AI · Computer Vision &amp; Medical AI · Optimisation</p>
+    </section>
+
+    <section id="research" class="block">
+      <div class="eyebrow"><span class="n">02</span> Publications</div>
+      <h2>Peer-reviewed research</h2>
+
+      <article class="pub">
+        <span class="pub-role">Lead author</span>
+        <h3><a href="https://ieeexplore.ieee.org/abstract/document/10493596" target="_blank" rel="noopener">A comparative study of different segmentation and regression models for fetal head circumference measurement</a></h3>
+        <p class="auth"><b>P. Ahmed</b>, M. S. U. Yusuf, S. Sarker, A. Chowdhury, A. Bhowmik, F. Rahman</p>
+        <div class="venue"><span>IEEE ICETITE 2024</span><span>pp. 1–6</span><span class="cite">Cited by 7</span></div>
+        <div class="venue">DOI: 10.1109/IC-ETITE58242.2024.10493596</div>
+      </article>
+
+      <article class="pub">
+        <span class="pub-role co">Co-author</span>
+        <h3><a href="https://ieeexplore.ieee.org/abstract/document/10914745" target="_blank" rel="noopener">Advanced Particle Swarm Optimization: an innovative approach towards addressing constrained optimization challenges</a></h3>
+        <p class="auth">A. Hasan, S. Sarker, A. Bhowmik, <b>P. Ahmed</b>, A. Chowdhury, M. M. Islam</p>
+        <div class="venue"><span>IEEE WIECON-ECE 2024</span><span class="cite">Cited by 2</span></div>
+        <div class="venue">DOI: 10.1109/WIECON-ECE64149.2024.10914745</div>
+      </article>
+
+      <div class="metrics">
+        <div class="metric"><div class="n">9</div><div class="l">Citations</div></div>
+        <div class="metric"><div class="n">2</div><div class="l">h-index</div></div>
+        <div class="metric"><div class="n">2</div><div class="l">IEEE publications</div></div>
+      </div>
+    </section>
+
+    <section id="education" class="block">
+      <div class="eyebrow"><span class="n">03</span> Education</div>
+      <div class="edu-head">
+        <h3>Master of Data Science</h3>
+        <span class="meta">Macquarie University, Sydney</span>
+      </div>
+      <p class="edu-line">February 2025 – present · 4th semester · WAM <b>76.2</b></p>
+      <div class="focus-row">
+        <div class="k">Core focus</div>
+        <div class="v">Graph neural networks &amp; fraud detection, time series forecasting, statistical &amp; machine learning methods, mining unstructured data</div>
+      </div>
+      <div class="focus-row">
+        <div class="k">Also covered</div>
+        <div class="v">Statistical inference, applied data science, big data technologies, database systems, statistical computing, IS project &amp; risk management</div>
+      </div>
+
+      <div class="edu-head" style="margin-top:26px">
+        <h3>Bachelor of Science in Electrical and Electronic Engineering</h3>
+        <span class="meta">Khulna University of Engineering and Technology (KUET), Bangladesh</span>
+      </div>
+      <p class="edu-line">2018 – 2022</p>
+    </section>
+
+    <section id="projects" class="block">
+      <div class="eyebrow"><span class="n">04</span> Projects</div>
+      <h2>Selected work</h2>
+
+      <div class="proj">
+        <span class="pub-role">Current · Major Project</span>
+        <div class="ph"><h3>Benchmarking Graph-Based Fraud Detection: A Unified Evaluation of State-of-the-Art Methods</h3><span class="stack">PyTorch · GNNs · Kaggle</span></div>
+        <p>Team project under Dr Venus Haghighi benchmarking graph-based fraud-detection methods under a common, reproducible evaluation framework, focused on class imbalance, heterophily and fraud camouflage rather than single-run leaderboard results. Built the common evaluator, imbalance-aware metrics, multi-seed aggregation, statistical result summaries, and runtime/peak-memory profiling for performance-cost analysis.</p>
+      </div>
+
+      <div class="proj">
+        <span class="pub-role">Current · Coursework Project</span>
+        <div class="ph"><h3>Replicating and Generalising LTSF-Linear</h3><span class="stack">Python · DLinear</span></div>
+        <p>Reproduces and extends DLinear/LTSF-Linear (Zeng et al., "Are Transformers Effective for Time Series Forecasting?", AAAI 2023) on public and controlled synthetic time series to test whether simple linear forecasters remain competitive with Transformer-based models under trend, seasonality, regime change, noise and level shifts.</p>
+      </div>
+
+      <div class="proj">
+        <div class="ph"><h3>Multi-Instance Learning for Medical Image Analysis</h3><span class="stack">weak supervision · attention · survey</span></div>
+        <p>A literature survey tracing Multi-Instance Learning from classical instance- and bag-level methods to attention-based, correlation-aware and hierarchical deep models, using whole-slide pathology as the anchoring application, where a slide is a bag of patches and only slide-level labels exist. Builds directly on the segmentation and regression comparison in my published imaging work.</p>
+      </div>
+
+      <div class="proj">
+        <div class="ph"><h3>SafeSignal: Early Product-Safety Risk Detection</h3><span class="stack">RoBERTa · PU learning · Sentence-BERT · FAISS</span></div>
+        <p>Designed and prototyped an unstructured-text mining pipeline that surfaces emerging product-safety hazards from customer reviews and complaint narratives. Combines transformer hazard extraction, positive-unlabelled learning for scarce labels, semantic recall retrieval, temporal burst detection, heterogeneous graph aggregation, and evidence-grounded LLM summarisation, outputting a ranked analyst alert with traceable evidence rather than an automated decision.</p>
+      </div>
+
+      <div class="proj">
+        <div class="ph"><h3>Human Activity Recognition from Smartphone Sensors</h3><span class="stack">Python · scikit-learn · Random Forest</span></div>
+        <p>Built a supervised classifier for six activities of daily living on the UCI HAR benchmark (10,299 samples, 30 participants, 561 engineered accelerometer and gyroscope features). Random Forest was selected over SVM for robustness to high-dimensional noisy features, reaching 92.6% accuracy and 0.92 macro F1 under subject-independent evaluation, with per-class confusion analysis of the remaining errors.</p>
+      </div>
+
+      <div class="proj">
+        <div class="ph"><h3>Rare-Event Financial Risk / Mortgage Default Modelling</h3><span class="stack">R · tidymodels · imbalanced classification</span></div>
+        <p>Predicted serious Fannie Mae mortgage default using only origination-time credit, debt and equity signals, deliberately excluding post-origination variables that would leak the outcome. Compared logistic regression, LDA, regularised logistic regression, decision tree and random forest under leakage-safe, rare-event-aware evaluation, examining discrimination and interpretability trade-offs (ROC AUC, PR AUC, top-decile capture) for imbalanced financial-risk prediction.</p>
+      </div>
+
+      <div class="proj">
+        <div class="ph"><h3>Medical Insurance Cost Prediction</h3><span class="stack">R · glmnet · Random Forest · 10-fold CV</span></div>
+        <p>Modelled private health-insurance claim expenses under heavy zero-inflation using a two-part hurdle framing, separating claim occurrence from claim severity. Tuned an elastic net (jointly over penalty and L1/L2 mixture) against a random forest via stratified 10-fold cross-validation, with log-scale outcomes for comparable RMSE and recipe-based preprocessing kept inside the resamples.</p>
+      </div>
+
+      <div class="proj">
+        <div class="ph"><h3>Payroll &amp; Revenue Forecasting</h3><span class="stack">Python · scikit-learn · bootstrap</span></div>
+        <p>Forecast a company's payroll and revenue trajectory, comparing ordinary least squares against Huber robust regression after identifying a large outlier month via IQR analysis. Justified MAE as the business-facing metric, quantified uncertainty with 1,000-iteration bootstrap confidence intervals, and critically assessed where long-horizon linear projections stop being credible.</p>
+      </div>
+
+      <div class="proj">
+        <div class="ph"><h3>Pedestrian Crash Severity Analysis</h3><span class="stack">R · JAGS · MCMC</span></div>
+        <p>Modelled injury severity in South Australian pedestrian crashes (2019–2023) with a Bayesian logistic regression, reporting population-standardised probabilities and odds ratios. Included MCMC convergence diagnostics, posterior-predictive checks and prior-sensitivity analysis so the conclusions could be stress-tested rather than taken on trust.</p>
+      </div>
+
+      <div class="proj featured">
+        <span class="featured-label">★ Live Build</span>
+        <div class="ph"><h3>Postgraduate Research Planner</h3><span class="stack">JavaScript · client-side · Claude API</span></div>
+        <p>A free, browser-based planning tool built around one core idea: a single profile drives everything downstream &mdash; supervisor and collaborator search, a nine-section proposal builder, tailored outreach-email drafting, and CV/portfolio guidance. <b>Researcher Arena</b> adds an evidence layer on top &mdash; scholarly-graph and dataset search, a real in-browser dataset health check (row counts, missing values, class balance), a research-gap finder, a multi-style citation generator, and a GPU/compute-memory calculator. Deliberately privacy-first: everything is saved to local browser storage only, nothing is uploaded to a server, and there's no login or tracking. An optional AI-assist button calls the Claude API directly for a second pass on any section, always left fully editable.</p>
+        <a class="visit" href="https://pathik0007.github.io/postgrad-research-planner/" target="_blank" rel="noopener">↗ Visit the live site</a>
+      </div>
+
+      <div class="proj">
+        <div class="ph"><h3>FPL Prediction Site</h3><span class="stack">data-driven · web</span></div>
+        <p>A Fantasy Premier League analytics build pulling player and fixture data from the official FPL API into transfer and captaincy recommendations, published under the PotFPL name.</p>
+        <a class="repo" href="https://github.com/49025791Pathik/fpl" target="_blank" rel="noopener">↗ github.com/49025791Pathik/fpl</a>
+      </div>
+
+      <p class="aside-note"><b>Also:</b> R package development with unit testing and Quarto vignettes; a large-scale survey analysis (n = 2,000) using hypothesis testing and multiple regression; spatial query processing with R-tree indexing; and relational database design with stored procedures and transaction control.</p>
+    </section>
+
+    <section id="skills" class="block">
+      <div class="eyebrow"><span class="n">05</span> Skills</div>
+      <h2>Technical toolkit</h2>
+      <div class="skill">
+        <div class="k">ML / Deep learning</div>
+        <div class="chips">
+          <span class="chip pri">CNN architectures</span>
+          <span class="chip pri">Graph neural networks</span>
+          <span class="chip">ResNet-50</span>
+          <span class="chip">InceptionV3</span>
+          <span class="chip">EfficientNet</span>
+          <span class="chip">U-Net</span>
+          <span class="chip">Attention U-Net</span>
+          <span class="chip">Transformers / RoBERTa</span>
+          <span class="chip">Image segmentation</span>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="k">Statistical learning</div>
+        <div class="chips">
+          <span class="chip pri">Regularised regression</span>
+          <span class="chip">Random forests</span>
+          <span class="chip">Cross-validation</span>
+          <span class="chip">Imbalanced classification</span>
+          <span class="chip">ROC / PR AUC</span>
+          <span class="chip">Robust regression</span>
+          <span class="chip">Bayesian inference</span>
+          <span class="chip">Time series forecasting</span>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="k">Languages &amp; tools</div>
+        <div class="chips">
+          <span class="chip pri">Python</span>
+          <span class="chip">scikit-learn</span>
+          <span class="chip">pandas</span>
+          <span class="chip">matplotlib</span>
+          <span class="chip pri">R</span>
+          <span class="chip">tidyverse</span>
+          <span class="chip">tidymodels</span>
+          <span class="chip">Quarto</span>
+          <span class="chip">testthat</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Git</span>
+          <span class="chip">Tableau</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="block">
+      <div class="eyebrow"><span class="n">06</span> Experience</div>
+      <h2>Professional background</h2>
+
+      <div class="role-block">
+        <div class="role-head">
+          <span class="r">AI Operations Manager</span>
+          <span class="d">Dec 2023 – Jan 2025</span>
+        </div>
+        <div class="org">Grabsoft Digital · Dhaka</div>
+        <p style="font-size:14px;color:var(--muted);line-height:1.62;max-width:64ch;margin-top:6px">Led B2B client engagements integrating AI capabilities into existing software products, managing solution design and implementation from initial scoping through to delivery.</p>
+      </div>
+
+      <div class="role-block">
+        <div class="role-head">
+          <span class="r">Certification</span>
+        </div>
+        <p style="font-size:14px;color:var(--muted);line-height:1.62;max-width:64ch;margin-top:2px">Fundamentals of Visualization with Tableau, University of California, Davis (Jul 2025)</p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  (function(){
+    var links = Array.prototype.slice.call(document.querySelectorAll('.side nav a'));
+    var sections = links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+    if(!('IntersectionObserver' in window)) return;
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){
+          var id = '#'+e.target.id;
+          links.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href')===id); });
+        }
+      });
+    }, {rootMargin:'-30% 0px -60% 0px', threshold:0});
+    sections.forEach(function(s){ if(s) obs.observe(s); });
+  })();
+</script>
+</body>
+</html>
