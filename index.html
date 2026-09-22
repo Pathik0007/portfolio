@@ -4,13 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pathik Ahmed | Machine Learning, Graph Analytics &amp; Reliable AI</title>
-<meta name="description" content="Pathik Ahmed — Master of Data Science student at Macquarie University working on graph neural networks for fraud detection, time series forecasting, and weakly-supervised computer vision. Two IEEE publications, ongoing research, and applied projects.">
+<meta name="description" content="Pathik Ahmed — Master of Data Science student at Macquarie University working on graph machine learning, fraud detection, trustworthy AI, time-series forecasting and medical imaging.">
+<link rel="canonical" href="https://pathik0007.github.io/portfolio/">
 <meta property="og:title" content="Pathik Ahmed | Machine Learning, Graph Analytics &amp; Reliable AI">
-<meta property="og:description" content="Master of Data Science student at Macquarie University working on graph neural networks for fraud detection, time series forecasting, and weakly-supervised computer vision.">
+<meta property="og:description" content="Master of Data Science student at Macquarie University working on graph machine learning, fraud detection, trustworthy AI, time-series forecasting and medical imaging.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://pathik0007.github.io/portfolio/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Pathik Ahmed | Machine Learning, Graph Analytics &amp; Reliable AI">
-<meta name="twitter:description" content="Master of Data Science student at Macquarie University working on graph neural networks for fraud detection, time series forecasting, and weakly-supervised computer vision.">
+<meta name="twitter:description" content="Master of Data Science student at Macquarie University working on graph machine learning, fraud detection, trustworthy AI, time-series forecasting and medical imaging.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Pathik Ahmed","affiliation":{"@type":"CollegeOrUniversity","name":"Macquarie University"},"email":"mailto:ahmedpathik0108@gmail.com","sameAs":["https://orcid.org/0009-0003-5877-0526","https://www.linkedin.com/in/pathik-ahmed-418643149/","https://github.com/Pathik0007","https://scholar.google.com/citations?user=ib69qUkAAAAJ&hl=en"],"knowsAbout":["Graph Machine Learning","Fraud Detection","Time-Series Forecasting","Weakly-Supervised Learning","Medical Imaging"]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;450;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -19,7 +24,7 @@
     --paper:#FFFFFF;
     --ink:#15202B;
     --muted:#586572;
-    --faint:#97A1AC;
+    --faint:#6F7C87;
     --line:#E9EBEE;
     --line2:#F2F4F6;
     --accent:#0F6E63;
@@ -41,10 +46,11 @@
   a:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
   .shell{max-width:var(--maxw);margin:0 auto;padding:0 40px;display:grid;grid-template-columns:var(--sidebar) 1fr;gap:80px;align-items:start}
 
-  .side{position:sticky;top:0;height:100vh;padding:64px 0 40px;display:flex;flex-direction:column}
-  .monogram{width:64px;height:64px;border-radius:50%;background:var(--accent-soft);color:var(--accent-deep);
+  .side{position:sticky;top:0;max-height:100vh;overflow-y:auto;padding:64px 0 40px;display:flex;flex-direction:column}
+  .monogram{width:70px;height:70px;border-radius:50%;background:var(--accent-soft);color:var(--accent-deep);
     display:flex;align-items:center;justify-content:center;font-family:"Fraunces",serif;font-weight:600;font-size:24px;
-    letter-spacing:.02em;border:1px solid #D6E7E3;margin-bottom:26px}
+    letter-spacing:.02em;border:1px solid #D6E7E3;margin-bottom:26px;overflow:hidden}
+  .monogram img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
   .side h1{font-family:"Fraunces",serif;font-weight:500;font-size:30px;line-height:1.08;letter-spacing:-.01em;margin-bottom:8px}
   .side .role{font-size:14px;color:var(--muted);letter-spacing:.01em}
   .side .tag{font-size:13.5px;color:var(--faint);margin-top:14px;line-height:1.5;max-width:24ch}
@@ -63,7 +69,7 @@
   main{padding:64px 0 100px;min-width:0}
   .block{padding-bottom:64px;margin-bottom:64px;border-bottom:1px solid var(--line)}
   .block:last-child{border-bottom:none;margin-bottom:0}
-  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;display:flex;align-items:center;gap:10px}
+  .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;display:flex;align-items:center;gap:10px}
   .eyebrow .n{color:var(--faint)}
   h2{font-family:"Fraunces",serif;font-weight:500;font-size:27px;letter-spacing:-.01em;margin-bottom:22px}
   .intro{font-size:18.5px;line-height:1.62;color:var(--ink);max-width:60ch}
@@ -75,7 +81,7 @@
   .pub::before{content:"";position:absolute;left:0;top:6px;bottom:26px;width:2px;background:var(--line);transition:background .2s}
   .pub:hover::before{background:var(--accent)}
   .pub:last-of-type::before{bottom:0}
-  .pub-role{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin-bottom:9px;display:inline-block}
+  .pub-role{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);margin-bottom:9px;display:inline-block}
   .pub-role.co{color:var(--faint)}
   .pub h3{font-family:"Fraunces",serif;font-weight:500;font-size:20px;line-height:1.32;margin-bottom:10px}
   .pub h3 a{color:var(--ink)}
@@ -94,14 +100,14 @@
   .edu-line{font-size:14.5px;color:var(--muted);margin-bottom:20px}
   .edu-line b{color:var(--ink);font-weight:600;font-family:"IBM Plex Mono",monospace;font-size:13.5px}
   .focus-row{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:14px 0;border-top:1px solid var(--line2);font-size:14.5px}
-  .focus-row .k{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--faint)}
+  .focus-row .k{font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--faint)}
   .focus-row .v{color:var(--ink)}
 
   .proj{display:block;padding:20px 22px;border:1px solid var(--line);border-radius:10px;margin-bottom:13px;transition:border-color .18s,box-shadow .18s,transform .18s}
   .proj:hover{border-color:#D6E7E3;box-shadow:0 6px 22px -14px rgba(15,110,99,.35);transform:translateY(-2px)}
   .proj.featured{border:1.5px solid var(--accent);background:linear-gradient(180deg,var(--accent-soft) 0%,rgba(232,243,241,.35) 100%);box-shadow:0 8px 26px -16px rgba(15,110,99,.45);margin-bottom:22px;margin-top:4px}
   .proj.featured:hover{border-color:var(--accent-deep);transform:translateY(-2px)}
-  .featured-label{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--accent-deep);display:inline-block;padding:3px 9px;border-radius:20px;margin-bottom:10px}
+  .featured-label{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--accent-deep);display:inline-block;padding:3px 9px;border-radius:20px;margin-bottom:10px}
   .proj .visit{font-family:"IBM Plex Mono",monospace;font-size:12.5px;margin-top:12px;display:inline-flex;align-items:center;gap:6px;color:var(--accent-deep);font-weight:500;background:#fff;border:1px solid var(--accent);padding:6px 12px;border-radius:7px;transition:background .15s}
   .proj .visit:hover{background:var(--accent-soft)}
   .proj .ph{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:7px}
@@ -109,6 +115,9 @@
   .proj .stack{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--accent);white-space:nowrap}
   .proj p{font-size:14px;color:var(--muted);line-height:1.62;max-width:66ch}
   .proj .repo{font-family:"IBM Plex Mono",monospace;font-size:12px;margin-top:10px;display:inline-block}
+  .proj-tier-label{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin:26px 0 12px;padding-top:4px}
+  .proj-tier-label:first-of-type{margin-top:0}
+  .sr-h2{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
   .aside-note{font-size:13.5px;color:var(--muted);line-height:1.7;padding:16px 20px;background:var(--line2);border-radius:10px}
   .aside-note b{color:var(--ink);font-weight:600}
 
@@ -134,8 +143,11 @@
 
   @media (max-width:860px){
     .shell{grid-template-columns:1fr;gap:0;padding:0 28px}
-    .side{position:static;height:auto;padding:52px 0 8px}
-    .side nav{display:none}
+    .side{position:static;max-height:none;height:auto;padding:52px 0 8px}
+    .side nav{display:flex;flex-direction:row;flex-wrap:nowrap;gap:18px;overflow-x:auto;-webkit-overflow-scrolling:touch;
+      margin-top:20px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+    .side nav a{padding:4px 0;white-space:nowrap}
+    .side nav a::before{display:none}
     .side .social{margin-top:22px;padding-top:22px;border-top:1px solid var(--line)}
     .side .loc{margin-top:12px}
     main{padding:44px 0 72px}
@@ -149,10 +161,10 @@
 <div class="shell">
 
   <aside class="side">
-    <div class="monogram">PA</div>
+    <div class="monogram"><img src="data:image/jpeg;base64,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" alt="Pathik Ahmed"></div>
     <h1>Pathik Ahmed</h1>
-    <div class="role">Machine Learning, Graph Analytics &amp; Reliable AI</div>
-    <p class="tag">Master of Data Science Student, Macquarie University</p>
+    <div class="role">Machine Learning &middot; Deep Learning &middot; GNN &middot; Statistical Learning</div>
+    <p class="tag">Master of Data Science &middot; Macquarie University &middot; Expected Dec 2026</p>
     <nav aria-label="Sections">
       <a href="#about">About</a>
       <a href="#research">Publications</a>
@@ -162,7 +174,7 @@
       <a href="#experience">Experience</a>
     </nav>
     <div class="social">
-      <a href="mailto:pathik.ahmed@students.mq.edu.au">Email</a>
+      <a href="mailto:ahmedpathik0108@gmail.com">Email</a>
       <a href="https://scholar.google.com/citations?user=ib69qUkAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
       <a href="https://orcid.org/0009-0003-5877-0526" target="_blank" rel="noopener">ORCID</a>
       <a href="https://www.linkedin.com/in/pathik-ahmed-418643149/" target="_blank" rel="noopener">LinkedIn</a>
@@ -175,9 +187,10 @@
 
     <section id="about" class="block">
       <div class="eyebrow"><span class="n">01</span> About</div>
-      <p class="intro">Master of Data Science student at Macquarie University, Sydney, working in <em>machine learning</em>, <em>deep learning</em>, and <em>statistical learning</em>.</p>
+      <h2 class="sr-h2">About</h2>
+      <p class="intro">Final-semester Master of Data Science student at Macquarie University, Sydney, working in <em>machine learning</em>, <em>deep learning</em>, <em>GNN</em>, and <em>statistical learning</em>.</p>
       <p class="intro">Published research applies convolutional regression and segmentation architectures to fetal biometry from ultrasound, alongside a second paper on metaheuristic optimisation for constrained problems. Current work extends this into <b>graph neural networks for fraud detection</b> and <b>time series forecasting</b>, alongside <b>weakly-supervised and attention-based learning</b>, unstructured text and image mining, and predictive modelling on real, messy, imbalanced data. Rigour matters as much as results: honest evaluation metrics, leakage-safe design, and reproducible pipelines.</p>
-      <p class="intro" style="font-style:italic">Research interests: Graph Machine Learning · Fraud &amp; Anomaly Detection · Robust &amp; Trustworthy AI · Time-Series &amp; Continual Learning · Data-Centric &amp; Generative AI · Explainable AI · Computer Vision &amp; Medical AI · Optimisation</p>
+      <p class="intro" style="font-style:italic">Research interests: Graph Machine Learning &middot; Deep Learning &middot; Fraud &amp; Anomaly Detection &middot; Time-Series Forecasting &middot; Weakly-Supervised Learning &middot; Medical Imaging &amp; Computer Vision &middot; Image Processing</p>
     </section>
 
     <section id="research" class="block">
@@ -185,42 +198,42 @@
       <h2>Peer-reviewed research</h2>
 
       <article class="pub">
-        <span class="pub-role">Lead author</span>
+        <span class="pub-role">First author</span>
         <h3><a href="https://ieeexplore.ieee.org/abstract/document/10493596" target="_blank" rel="noopener">A comparative study of different segmentation and regression models for fetal head circumference measurement</a></h3>
         <p class="auth"><b>P. Ahmed</b>, M. S. U. Yusuf, S. Sarker, A. Chowdhury, A. Bhowmik, F. Rahman</p>
-        <div class="venue"><span>IEEE ICETITE 2024</span><span>pp. 1–6</span><span class="cite">Cited by 7</span></div>
-        <div class="venue">DOI: 10.1109/IC-ETITE58242.2024.10493596</div>
+        <div class="venue"><span>IEEE ICETITE 2024</span><span>pp. 1–6</span></div>
+        <div class="venue"><a href="https://doi.org/10.1109/IC-ETITE58242.2024.10493596" target="_blank" rel="noopener">doi.org/10.1109/IC-ETITE58242.2024.10493596</a></div>
       </article>
 
       <article class="pub">
         <span class="pub-role co">Co-author</span>
         <h3><a href="https://ieeexplore.ieee.org/abstract/document/10914745" target="_blank" rel="noopener">Advanced Particle Swarm Optimization: an innovative approach towards addressing constrained optimization challenges</a></h3>
         <p class="auth">A. Hasan, S. Sarker, A. Bhowmik, <b>P. Ahmed</b>, A. Chowdhury, M. M. Islam</p>
-        <div class="venue"><span>IEEE WIECON-ECE 2024</span><span class="cite">Cited by 2</span></div>
-        <div class="venue">DOI: 10.1109/WIECON-ECE64149.2024.10914745</div>
+        <div class="venue"><span>IEEE WIECON-ECE 2024</span></div>
+        <div class="venue"><a href="https://doi.org/10.1109/WIECON-ECE64149.2024.10914745" target="_blank" rel="noopener">doi.org/10.1109/WIECON-ECE64149.2024.10914745</a></div>
       </article>
 
       <div class="metrics">
-        <div class="metric"><div class="n">9</div><div class="l">Citations</div></div>
-        <div class="metric"><div class="n">2</div><div class="l">h-index</div></div>
-        <div class="metric"><div class="n">2</div><div class="l">IEEE publications</div></div>
+        <div class="metric"><div class="n">2</div><div class="l">Peer-reviewed IEEE publications</div></div>
       </div>
+      <p style="font-size:12.5px;color:var(--faint);margin-top:10px">Live citation metrics via Google Scholar (linked in sidebar).</p>
     </section>
 
     <section id="education" class="block">
       <div class="eyebrow"><span class="n">03</span> Education</div>
+      <h2 class="sr-h2">Education</h2>
       <div class="edu-head">
         <h3>Master of Data Science</h3>
         <span class="meta">Macquarie University, Sydney</span>
       </div>
-      <p class="edu-line">February 2025 – present · 4th semester · WAM <b>76.2</b></p>
+      <p class="edu-line">February 2025 – December 2026 (expected)</p>
       <div class="focus-row">
         <div class="k">Core focus</div>
         <div class="v">Graph neural networks &amp; fraud detection, time series forecasting, statistical &amp; machine learning methods, mining unstructured data</div>
       </div>
       <div class="focus-row">
-        <div class="k">Also covered</div>
-        <div class="v">Statistical inference, applied data science, big data technologies, database systems, statistical computing, IS project &amp; risk management</div>
+        <div class="k">Relevant coursework</div>
+        <div class="v">Statistical &amp; machine learning methods, statistical inference, statistical computing, big data technologies, mining unstructured data, database systems</div>
       </div>
 
       <div class="edu-head" style="margin-top:26px">
@@ -234,10 +247,12 @@
       <div class="eyebrow"><span class="n">04</span> Projects</div>
       <h2>Selected work</h2>
 
+      <div class="proj-tier-label">Current Research</div>
+
       <div class="proj">
         <span class="pub-role">Current · Major Project</span>
-        <div class="ph"><h3>Benchmarking Graph-Based Fraud Detection: A Unified Evaluation of State-of-the-Art Methods</h3><span class="stack">PyTorch · GNNs · Kaggle</span></div>
-        <p>Team project under Dr Venus Haghighi benchmarking graph-based fraud-detection methods under a common, reproducible evaluation framework, focused on class imbalance, heterophily and fraud camouflage rather than single-run leaderboard results. Built the common evaluator, imbalance-aware metrics, multi-seed aggregation, statistical result summaries, and runtime/peak-memory profiling for performance-cost analysis.</p>
+        <div class="ph"><h3>Benchmarking Graph-Based Fraud Detection: A Unified Evaluation of State-of-the-Art Methods</h3><span class="stack">Python · PyTorch · GNNs</span></div>
+        <p>Team project under Dr Venus Haghighi benchmarking graph-based fraud-detection methods under a common, reproducible evaluation framework, focused on class imbalance, heterophily and fraud camouflage rather than single-run leaderboard results. My individual contribution: the common evaluation pipeline, imbalance-aware metrics, multi-seed aggregation, statistical result summaries, and runtime/peak-memory profiling for performance-cost analysis.</p>
       </div>
 
       <div class="proj">
@@ -248,12 +263,39 @@
 
       <div class="proj">
         <div class="ph"><h3>Multi-Instance Learning for Medical Image Analysis</h3><span class="stack">weak supervision · attention · survey</span></div>
-        <p>A literature survey tracing Multi-Instance Learning from classical instance- and bag-level methods to attention-based, correlation-aware and hierarchical deep models, using whole-slide pathology as the anchoring application, where a slide is a bag of patches and only slide-level labels exist. Builds directly on the segmentation and regression comparison in my published imaging work.</p>
+        <p>A literature survey tracing Multi-Instance Learning from classical instance- and bag-level methods to attention-based, correlation-aware and hierarchical deep models, using whole-slide pathology as the anchoring application, where a slide is a bag of patches and only slide-level labels exist. Extends my previous medical-imaging research into weakly-supervised learning, where only coarse slide-level supervision may be available.</p>
       </div>
+
+      <div class="proj-tier-label">Selected Applied Research</div>
 
       <div class="proj">
         <div class="ph"><h3>SafeSignal: Early Product-Safety Risk Detection</h3><span class="stack">RoBERTa · PU learning · Sentence-BERT · FAISS</span></div>
-        <p>Designed and prototyped an unstructured-text mining pipeline that surfaces emerging product-safety hazards from customer reviews and complaint narratives. Combines transformer hazard extraction, positive-unlabelled learning for scarce labels, semantic recall retrieval, temporal burst detection, heterogeneous graph aggregation, and evidence-grounded LLM summarisation, outputting a ranked analyst alert with traceable evidence rather than an automated decision.</p>
+        <p>A prototype unstructured-text mining pipeline exploring how emerging product-safety hazards could be surfaced from customer reviews and complaint narratives. The design explores transformer hazard extraction, positive-unlabelled learning for scarce labels, semantic recall retrieval, temporal burst detection, heterogeneous graph aggregation, and evidence-grounded LLM summarisation, aiming for a ranked analyst alert with traceable evidence rather than an automated decision.</p>
+      </div>
+
+      <div class="proj">
+        <div class="ph"><h3>Mortgage Default Risk Modelling</h3><span class="stack">R · tidymodels · imbalanced classification</span></div>
+        <p>Predicted serious Fannie Mae mortgage default using only origination-time credit, debt and equity signals, deliberately excluding post-origination variables that would leak the outcome. Compared logistic regression, LDA, regularised logistic regression, decision tree and random forest under leakage-safe, rare-event-aware evaluation, examining discrimination and interpretability trade-offs (ROC AUC, PR AUC, top-decile capture) for imbalanced financial-risk prediction.</p>
+      </div>
+
+      <div class="proj">
+        <div class="ph"><h3>Pedestrian Crash Severity Analysis</h3><span class="stack">R · JAGS · MCMC</span></div>
+        <p>Modelled injury severity in South Australian pedestrian crashes (2019–2023) with a Bayesian logistic regression, reporting population-standardised probabilities and odds ratios. Included MCMC convergence diagnostics, posterior-predictive checks and prior-sensitivity analysis so the conclusions could be stress-tested rather than taken on trust.</p>
+      </div>
+
+      <div class="proj-tier-label">Tools &amp; Other Builds</div>
+
+      <div class="proj featured">
+        <span class="featured-label">★ Live Build</span>
+        <div class="ph"><h3>Postgraduate Research Planner</h3><span class="stack">JavaScript · client-side · Claude API</span></div>
+        <p>A free, browser-based planning tool: a single profile drives supervisor search, a proposal builder, outreach-email drafting, and CV/portfolio guidance, plus a research-evidence layer (dataset search, citation generation, a GPU/compute calculator). Core profile and planning data are stored locally in the browser; no account or analytics tracking is used. When the optional AI-assist feature is explicitly invoked, the selected text is sent to the Claude API for processing.</p>
+        <a class="visit" href="https://pathik0007.github.io/postgrad-research-planner/" target="_blank" rel="noopener">↗ Visit the live site</a>
+      </div>
+
+      <div class="proj">
+        <div class="ph"><h3>FPL Prediction Site</h3><span class="stack">data-driven · web</span></div>
+        <p>A Fantasy Premier League analytics build pulling player and fixture data from the official FPL API into transfer and captaincy recommendations, published under the PotFPL name.</p>
+        <a class="repo" href="https://github.com/49025791Pathik/fpl" target="_blank" rel="noopener">↗ View repository</a>
       </div>
 
       <div class="proj">
@@ -262,36 +304,13 @@
       </div>
 
       <div class="proj">
-        <div class="ph"><h3>Rare-Event Financial Risk / Mortgage Default Modelling</h3><span class="stack">R · tidymodels · imbalanced classification</span></div>
-        <p>Predicted serious Fannie Mae mortgage default using only origination-time credit, debt and equity signals, deliberately excluding post-origination variables that would leak the outcome. Compared logistic regression, LDA, regularised logistic regression, decision tree and random forest under leakage-safe, rare-event-aware evaluation, examining discrimination and interpretability trade-offs (ROC AUC, PR AUC, top-decile capture) for imbalanced financial-risk prediction.</p>
+        <div class="ph"><h3>Payroll &amp; Revenue Forecasting</h3><span class="stack">Python · scikit-learn · bootstrap</span></div>
+        <p>Forecasted a company's payroll and revenue trajectory, comparing ordinary least squares against Huber robust regression after identifying a large outlier month via IQR analysis. Justified MAE as the business-facing metric, quantified uncertainty with 1,000-iteration bootstrap confidence intervals, and critically assessed where long-horizon linear projections stop being credible.</p>
       </div>
 
       <div class="proj">
         <div class="ph"><h3>Medical Insurance Cost Prediction</h3><span class="stack">R · glmnet · Random Forest · 10-fold CV</span></div>
-        <p>Modelled private health-insurance claim expenses under heavy zero-inflation using a two-part hurdle framing, separating claim occurrence from claim severity. Tuned an elastic net (jointly over penalty and L1/L2 mixture) against a random forest via stratified 10-fold cross-validation, with log-scale outcomes for comparable RMSE and recipe-based preprocessing kept inside the resamples.</p>
-      </div>
-
-      <div class="proj">
-        <div class="ph"><h3>Payroll &amp; Revenue Forecasting</h3><span class="stack">Python · scikit-learn · bootstrap</span></div>
-        <p>Forecast a company's payroll and revenue trajectory, comparing ordinary least squares against Huber robust regression after identifying a large outlier month via IQR analysis. Justified MAE as the business-facing metric, quantified uncertainty with 1,000-iteration bootstrap confidence intervals, and critically assessed where long-horizon linear projections stop being credible.</p>
-      </div>
-
-      <div class="proj">
-        <div class="ph"><h3>Pedestrian Crash Severity Analysis</h3><span class="stack">R · JAGS · MCMC</span></div>
-        <p>Modelled injury severity in South Australian pedestrian crashes (2019–2023) with a Bayesian logistic regression, reporting population-standardised probabilities and odds ratios. Included MCMC convergence diagnostics, posterior-predictive checks and prior-sensitivity analysis so the conclusions could be stress-tested rather than taken on trust.</p>
-      </div>
-
-      <div class="proj featured">
-        <span class="featured-label">★ Live Build</span>
-        <div class="ph"><h3>Postgraduate Research Planner</h3><span class="stack">JavaScript · client-side · Claude API</span></div>
-        <p>A free, browser-based planning tool built around one core idea: a single profile drives everything downstream &mdash; supervisor and collaborator search, a nine-section proposal builder, tailored outreach-email drafting, and CV/portfolio guidance. <b>Researcher Arena</b> adds an evidence layer on top &mdash; scholarly-graph and dataset search, a real in-browser dataset health check (row counts, missing values, class balance), a research-gap finder, a multi-style citation generator, and a GPU/compute-memory calculator. Deliberately privacy-first: everything is saved to local browser storage only, nothing is uploaded to a server, and there's no login or tracking. An optional AI-assist button calls the Claude API directly for a second pass on any section, always left fully editable.</p>
-        <a class="visit" href="https://pathik0007.github.io/postgrad-research-planner/" target="_blank" rel="noopener">↗ Visit the live site</a>
-      </div>
-
-      <div class="proj">
-        <div class="ph"><h3>FPL Prediction Site</h3><span class="stack">data-driven · web</span></div>
-        <p>A Fantasy Premier League analytics build pulling player and fixture data from the official FPL API into transfer and captaincy recommendations, published under the PotFPL name.</p>
-        <a class="repo" href="https://github.com/49025791Pathik/fpl" target="_blank" rel="noopener">↗ github.com/49025791Pathik/fpl</a>
+        <p>Modelled private health-insurance claim expenses under heavy zero-inflation using a two-part hurdle framing, separating claim occurrence from claim severity. Tuned an elastic net against a random forest via stratified 10-fold cross-validation, with log-scale outcomes for comparable RMSE.</p>
       </div>
 
       <p class="aside-note"><b>Also:</b> R package development with unit testing and Quarto vignettes; a large-scale survey analysis (n = 2,000) using hypothesis testing and multiple regression; spatial query processing with R-tree indexing; and relational database design with stored procedures and transaction control.</p>
@@ -303,15 +322,12 @@
       <div class="skill">
         <div class="k">ML / Deep learning</div>
         <div class="chips">
-          <span class="chip pri">CNN architectures</span>
           <span class="chip pri">Graph neural networks</span>
-          <span class="chip">ResNet-50</span>
-          <span class="chip">InceptionV3</span>
-          <span class="chip">EfficientNet</span>
-          <span class="chip">U-Net</span>
-          <span class="chip">Attention U-Net</span>
-          <span class="chip">Transformers / RoBERTa</span>
+          <span class="chip pri">PyTorch</span>
+          <span class="chip">CNNs</span>
           <span class="chip">Image segmentation</span>
+          <span class="chip">Transformers</span>
+          <span class="chip">Weak supervision</span>
         </div>
       </div>
       <div class="skill">
@@ -328,6 +344,17 @@
         </div>
       </div>
       <div class="skill">
+        <div class="k">Research evaluation</div>
+        <div class="chips">
+          <span class="chip pri">Reproducible evaluation</span>
+          <span class="chip">Multi-seed experimentation</span>
+          <span class="chip">Class-imbalance evaluation</span>
+          <span class="chip">Calibration / uncertainty</span>
+          <span class="chip">Statistical model comparison</span>
+          <span class="chip">Leakage-safe validation</span>
+        </div>
+      </div>
+      <div class="skill">
         <div class="k">Languages &amp; tools</div>
         <div class="chips">
           <span class="chip pri">Python</span>
@@ -341,7 +368,6 @@
           <span class="chip">testthat</span>
           <span class="chip">SQL</span>
           <span class="chip">Git</span>
-          <span class="chip">Tableau</span>
         </div>
       </div>
     </section>
@@ -359,13 +385,10 @@
         <p style="font-size:14px;color:var(--muted);line-height:1.62;max-width:64ch;margin-top:6px">Led B2B client engagements integrating AI capabilities into existing software products, managing solution design and implementation from initial scoping through to delivery.</p>
       </div>
 
-      <div class="role-block">
-        <div class="role-head">
-          <span class="r">Certification</span>
-        </div>
-        <p style="font-size:14px;color:var(--muted);line-height:1.62;max-width:64ch;margin-top:2px">Fundamentals of Visualization with Tableau, University of California, Davis (Jul 2025)</p>
-      </div>
+      <p style="font-size:12.5px;color:var(--faint);margin-top:16px">Additional training: Fundamentals of Visualization with Tableau, University of California, Davis (Jul 2025).</p>
     </section>
+
+    <p style="font-size:12px;color:var(--faint);text-align:center;padding:32px 0 8px">Last updated: September 2026</p>
 
   </main>
 </div>
